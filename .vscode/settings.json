@@ -1,0 +1,4 @@
+{
+    "uncrustify.configPath.linux": "etc/uncrustify/uncrustify.cfg",
+    "editor.defaultFormatter": "zachflower.uncrustify"
+}

@@ -1,0 +1,9 @@
+# Mac specific
+.DS_Store
+
+# Linux specific
+
+# Windows specific
+
+# Build
+build
