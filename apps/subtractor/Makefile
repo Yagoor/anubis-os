@@ -2,10 +2,10 @@
 BUILDROOT = ../..
 
 # Application
-APPNAME = app
+APPNAME = subtractor
 
 # Application source C files
-APP_C = app.c
+APP_C = subtractor.c
 
 # Include apps Makefile
 include $(BUILDROOT)/apps/Makefile
