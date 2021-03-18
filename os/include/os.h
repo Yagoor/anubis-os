@@ -28,7 +28,7 @@
  * @author Yago Fontoura do Rosario
  * @date 9 Sep 2012
  * @brief File containing the os interface
- * 
+ *
  */
 #ifndef OS_H_
 #define	OS_H_
@@ -37,7 +37,7 @@
 
 /**
  * @brief Main thread
- * 
+ *
  */
 PT_THREAD(os_protothread(struct pt *pt));
 
