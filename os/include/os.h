@@ -24,23 +24,21 @@
  ****************************************************************************/
 
 /**
- * @file add.h
+ * @file os.h
  * @author Yago Fontoura do Rosario
  * @date 9 Sep 2012
- * @brief File containing an add function
- *
- * @see https://en.wikipedia.org/wiki/Addition
+ * @brief File containing the os interface
+ * 
  */
-#ifndef ADD_H_
-#define	ADD_H_
+#ifndef OS_H_
+#define	OS_H_
+
+#include "pt.h"
 
 /**
- * @brief Adds two integer
- *
- * @param a integer a
- * @param b integer b
- * @return int a + b
+ * @brief Main thread
+ * 
  */
-int add(int a, int b);
+PT_THREAD(os_protothread(struct pt *pt));
 
-#endif /* ADD_H_ */
+#endif /* OS_H_ */

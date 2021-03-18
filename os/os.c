@@ -1,7 +1,6 @@
-#include "pt.h"
+#include "os.h"
 
-extern struct pt os_pt;
-extern int os_protothread(struct pt *pt);
+static struct pt os_pt;
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +9,9 @@ int main(int argc, char *argv[])
 
 	PT_INIT(&os_pt);
 
-	os_protothread(&os_pt);
+	do
+	{
+	} while (PT_SCHEDULE(os_protothread(&os_pt)));
 
 	return (0);
 }

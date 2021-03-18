@@ -1,5 +1,5 @@
 /***************************************************************************
- * Copyright (C) 2021 by Yago Fontoura do Rosario                                   *
+ * Copyright (C) 2021 by Yago Fontoura do Rosario                           *
  *                                                                          *
  * This file is part of Anubis-OS.                                          *
  *                                                                          *

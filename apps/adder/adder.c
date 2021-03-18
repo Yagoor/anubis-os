@@ -1,10 +1,8 @@
-#include "pt.h"
+#include "os.h"
 
 #include "add.h"
 
 #include <stdio.h>
-
-struct pt os_pt;
 
 PT_THREAD(os_protothread(struct pt *pt))
 {
