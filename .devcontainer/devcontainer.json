@@ -12,7 +12,9 @@
 
 	"extensions": [
 		"ms-vscode.cpptools",
-		"zachflower.uncrustify"
+		"zachflower.uncrustify",
+		"bbenoist.doxygen",
+		"cschlosser.doxdocgen"
 	],
 
 	"postCreateCommand": "gcc -v",

@@ -16,7 +16,7 @@ jobs:
     strategy:
         fail-fast: false
         matrix:
-            test: [ tests/unittest, tests/code-style, tests/build-all ]
+            test: [ tests/unittest, tests/code-style, tests/build-all , tests/docs ]
 
     steps:
 
