@@ -129,6 +129,7 @@ struct pt {
  * \hideinitializer
  */
 #define PT_END(pt) LC_END((pt)->lc); PT_YIELD_FLAG = 0; \
+                   (void) PT_YIELD_FLAG;						    \
                    PT_INIT(pt); return PT_ENDED; }
 
 /** @} */
