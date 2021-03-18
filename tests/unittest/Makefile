@@ -1,4 +1,6 @@
-SUBDIRS = os/sys/add os/sys/sub
+SUBDIRS = 	os/sys/add 	\
+			os/sys/sub 	\
+			os/sys/pt 	\
 
 .PHONY: all clean run
 
