@@ -5,7 +5,9 @@ BUILDROOT = ../../../../..
 APPNAME = test-pt
 
 # Test source C files
-APP_C = test-pt.c
+APP_C += test-pt.c 
+APP_C += test-pt-1.c
+APP_C += test-pt-2.c
 
 # Unit source C files
 UNIT_C = 

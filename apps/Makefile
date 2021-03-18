@@ -1,5 +1,6 @@
 # Modules
 MODULES = 
+MODULES += os
 MODULES += os/sys
 
 # Source directories

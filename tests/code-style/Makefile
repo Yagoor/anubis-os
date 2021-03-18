@@ -6,7 +6,9 @@ BUILD_DIR = build
 
 # Modules
 MODULES = 
-MODULES += os/sys os/dev
+MODULES += os 
+MODULES += os/sys 
+MODULES += os/dev
 MODULES += tests/unittest/*
 MODULES += tests/unittest/*/*
 MODULES += tests/unittest/*/*/*
