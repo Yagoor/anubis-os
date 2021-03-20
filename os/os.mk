@@ -8,3 +8,4 @@ SOURCE_C += os.c
 INCLUDE_DIRS += $(BUILDROOT)/os/include
 
 include $(BUILDROOT)/os/sys/sys.mk
+include $(BUILDROOT)/os/dev/dev.mk
