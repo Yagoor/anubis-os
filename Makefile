@@ -4,10 +4,10 @@ MKDIR = mkdir
 RM = rm
 
 # Build directory
-BUILD_DIR = build
+BUILD_DIR = _build
 
 # General options
-C_FLAGS += -Wall -pedantic -std=c99 -fPIC -MMD -MP -Wall
+C_FLAGS += -Wall -std=c11 -fPIC -MMD -MP -Wall
 MKDIR_FLAGS += -p
 RM_FLAGS += -rf
 
