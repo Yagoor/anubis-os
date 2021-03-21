@@ -31,7 +31,7 @@
  *
  */
 #ifndef WATCHDOG_H_
-#define	WATCHDOG_H_
+#define WATCHDOG_H_
 
 /**
  * @brief
