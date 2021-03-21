@@ -43,10 +43,10 @@ vpath %.h $(SOURCE_DIRS)
 all run check: $(OBJECTS)
 
 $(BUILD_DIR)/%.c.o: %.c
-	uncrustify -q -c $(BUILDROOT)/etc/uncrustify/uncrustify.cfg -f $< | diff -u $< --to-file=/dev/stdin
+	uncrustify -q -c uncrustify.cfg -f $< | diff -u $< --to-file=/dev/stdin
 
 $(BUILD_DIR)/%.h.o: %.h
-	uncrustify -q -c $(BUILDROOT)/etc/uncrustify/uncrustify.cfg -f $< | diff -u $< --to-file=/dev/stdin
+	uncrustify -q -c uncrustify.cfg -f $< | diff -u $< --to-file=/dev/stdin
 
 clean:
 	@echo $(SOURCE_DIRS)
