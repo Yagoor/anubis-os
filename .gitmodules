@@ -1,0 +1,3 @@
+[submodule "soc/esp32/sdk"]
+	path = soc/esp32/sdk
+	url = git@github.com:espressif/esp-idf.git
