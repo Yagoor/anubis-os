@@ -12,10 +12,10 @@ RUN apt-get -y install build-essential cmake cppcheck \
 
 # ESP32 toolchain
 RUN pushd tmp \
-    && wget https://github.com/espressif/crosstool-NG/releases/download/esp-2020r3/xtensa-esp32-elf-gcc8_4_0-esp-2020r3-linux-amd64.tar.gz
-    && tar -xf xtensa-esp32-elf-gcc8_4_0-esp-2020r3-linux-amd64.tar.gz
-    && cp -r xtensa-esp32-elf/* /usr/
-    && rm -rf *
+    && wget https://github.com/espressif/crosstool-NG/releases/download/esp-2020r3/xtensa-esp32-elf-gcc8_4_0-esp-2020r3-linux-amd64.tar.gz \
+    && tar -xf xtensa-esp32-elf-gcc8_4_0-esp-2020r3-linux-amd64.tar.gz \
+    && cp -r xtensa-esp32-elf/* /usr/ \
+    && rm -rf * \
     && popd
     
 # Clean up
