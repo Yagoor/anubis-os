@@ -2,6 +2,7 @@
 MODULES = 
 MODULES += os
 MODULES += os/sys
+MODULES += os/dev
 
 # Source directories
 SOURCE_DIRS = $(addprefix $(BUILDROOT)/, $(MODULES))
