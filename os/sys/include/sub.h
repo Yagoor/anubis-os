@@ -32,7 +32,7 @@
  * @see https://en.wikipedia.org/wiki/Subtraction
  */
 #ifndef SUB_H_
-#define	SUB_H_
+#define SUB_H_
 
 /**
  * @brief Subtracts two integer

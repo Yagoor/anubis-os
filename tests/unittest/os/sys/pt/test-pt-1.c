@@ -11,48 +11,48 @@ static struct pt pt1, pt2;
 
 static int protothread1(struct pt *pt)
 {
-	PT_BEGIN(pt);
+  PT_BEGIN(pt);
 
-	while (1)
-	{
-		PT_WAIT_UNTIL(pt, protothread2_flag != 0);
+  while (1)
+  {
+    PT_WAIT_UNTIL(pt, protothread2_flag != 0);
 
-		protothread2_flag = 0;
-		protothread1_flag = 1;
-		protothread1_counter++;
-	}
+    protothread2_flag = 0;
+    protothread1_flag = 1;
+    protothread1_counter++;
+  }
 
-	PT_END(pt);
+  PT_END(pt);
 }
 
 
 static int protothread2(struct pt *pt)
 {
-	PT_BEGIN(pt);
+  PT_BEGIN(pt);
 
-	while (1)
-	{
-		protothread2_flag = 1;
+  while (1)
+  {
+    protothread2_flag = 1;
 
-		PT_WAIT_UNTIL(pt, protothread1_flag != 0);
+    PT_WAIT_UNTIL(pt, protothread1_flag != 0);
 
-		protothread1_flag = 0;
-		protothread2_counter++;
-	}
-	PT_END(pt);
+    protothread1_flag = 0;
+    protothread2_counter++;
+  }
+  PT_END(pt);
 }
 
 
 void test_pt_1(void **state)
 {
-	protothread1_counter = 0;
-	protothread2_counter = 0;
-	PT_INIT(&pt1);
-	PT_INIT(&pt2);
+  protothread1_counter = 0;
+  protothread2_counter = 0;
+  PT_INIT(&pt1);
+  PT_INIT(&pt2);
 
-	while (protothread1_counter < 10 && protothread2_counter < 10)
-	{
-		protothread1(&pt1);
-		protothread2(&pt2);
-	}
+  while (protothread1_counter < 10 && protothread2_counter < 10)
+  {
+    protothread1(&pt1);
+    protothread2(&pt2);
+  }
 }
