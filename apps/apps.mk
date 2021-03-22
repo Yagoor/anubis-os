@@ -5,6 +5,6 @@ SOURCE_C += $(APP_C)
 TARGETS = $(BUILD_DIR)/$(APPNAME)
 
 # Modules
-include $(BUILDROOT)/os/Makefile
+include $(BUILDROOT)/os/os.mk
 
-include $(BUILDROOT)/Makefile
+include $(BUILDROOT)/base.mk
