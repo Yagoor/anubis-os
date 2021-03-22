@@ -7,4 +7,3 @@ SOURCE_C += sub.c
 
 # Include directories
 INCLUDE_DIRS += $(BUILDROOT)/os/sys/include
-
