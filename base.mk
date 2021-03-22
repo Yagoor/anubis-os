@@ -7,7 +7,7 @@ RM = rm
 BUILD_DIR = _build
 
 # General options
-C_FLAGS += -Wall -std=c11 -fPIC -MMD -MP -Wall
+C_FLAGS += -Wall -std=c11 -fPIC -MMD -MP
 MKDIR_FLAGS += -p
 RM_FLAGS += -rf
 
@@ -22,6 +22,8 @@ endif
 OBJECTS += $(foreach m, $(SOURCE_C), $(addprefix $(BUILD_DIR)/, $(addsuffix .o,$(basename $(m)))))
 
 DEPS += $(foreach m, $(SOURCE_C), $(addprefix $(BUILD_DIR)/, $(addsuffix .d,$(basename $(m)))))
+
+INCLUDES = $(foreach m, $(INCLUDE_DIRS), $(addprefix -I , $(m)))
 
 # Vpath to allow out-of-tree build
 vpath %.c $(SOURCE_DIRS)

@@ -5,6 +5,6 @@ SUBDIRS = 	os/sys/add 	\
 .PHONY: all clean run
 
 all clean run check:
-	for dir in $(SUBDIRS); do \
+	@for dir in $(SUBDIRS); do \
 		$(MAKE) -C $$dir -f Makefile $@; \
 	done

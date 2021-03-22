@@ -8,4 +8,4 @@ APPNAME = subtractor
 APP_C = subtractor.c
 
 # Include apps Makefile
-include $(BUILDROOT)/apps/Makefile
+include $(BUILDROOT)/apps/apps.mk

@@ -8,4 +8,4 @@ APPNAME = adder
 APP_C = adder.c
 
 # Include apps Makefile
-include $(BUILDROOT)/apps/Makefile
+include $(BUILDROOT)/apps/apps.mk
