@@ -34,7 +34,7 @@ $(TARGETS): $(OBJECTS)
 	$(CC) -o $@ $(OBJECTS) $(LDFLAGS)
 
 $(BUILD_DIR)/%.o: %.c | $(BUILD_DIR)
-	$(CC) -c $(C_FLAGS) $(INCLUDES) $< -o $@
+	$(CC) -c $(C_FLAGS) $(foreach m, $(INCLUDES), $(addprefix -I , $(m))) $< -o $@
 
 $(BUILD_DIR):
 	$(MKDIR) $(MKDIR_FLAGS) $@
