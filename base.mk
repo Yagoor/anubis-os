@@ -3,8 +3,12 @@ CC = gcc
 MKDIR = mkdir
 RM = rm
 
+ifndef BOARD
+$(error BOARD is not set)
+endif
+
 # Build directory
-BUILD_DIR = _build
+BUILD_DIR = _build/$(BOARD)
 
 # General options
 C_FLAGS += -Wall -std=c11 -fPIC -MMD -MP
