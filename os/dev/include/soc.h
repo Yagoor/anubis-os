@@ -31,7 +31,7 @@
  *
  */
 #ifndef SOC_H_
-#define	SOC_H_
+#define SOC_H_
 
 /**
  * @brief
