@@ -22,6 +22,12 @@ MODULES += tests/unittest/*/*/*
 MODULES += apps/*
 MODULES += apps/*/*
 MODULES += apps/*/*/*
+MODULES += soc/*
+MODULES += soc/*/*
+MODULES += soc/*/*/*
+MODULES += board/*
+MODULES += board/*/*
+MODULES += board/*/*/*
 
 # Source directories
 SOURCE_DIRS = $(addprefix $(BUILDROOT)/, $(MODULES))

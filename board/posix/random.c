@@ -37,5 +37,5 @@
 
 void random_init(void)
 {
-    srand(0xFFFF);
+  srand(0xFFFF);
 }
