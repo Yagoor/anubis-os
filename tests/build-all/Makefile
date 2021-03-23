@@ -1,24 +1,28 @@
 # Root directory
 BUILDROOT = ../..
 
-# Build directory
-BUILD_DIR = build
-
 # Depth to search for C file
-MODULES = apps/*
+APPLICATIONS = apps/*
 
 # Source directories
-SOURCE_DIRS = $(addprefix $(BUILDROOT)/, $(MODULES))
+APPLICATIONS_DIRS = $(addprefix $(BUILDROOT)/, $(APPLICATIONS))
 
-# Applications Makefile
-APPLICATIONS += $(foreach d, $(SOURCE_DIRS), $(subst /Makefile,,$(wildcard $(d)/Makefile)))
+# Application makefiles
+APPLICATIONS_MAKEFILES += $(foreach d, $(APPLICATIONS_DIRS), $(subst /Makefile,,$(wildcard $(d)/Makefile)))
+
+# Boards
+BOARDS = posix
 
 all clean:
-	for dir in $(APPLICATIONS); do \
-		$(MAKE) -C $$dir -f Makefile $@; \
+	@for board in $(BOARDS); do                              \
+		for dir in $(APPLICATIONS_MAKEFILES); do            \
+			$(MAKE) BOARD=$$board -C $$dir -f Makefile $@;  \
+		done                                                \
 	done
 
 run check:
-	for dir in $(APPLICATIONS); do \
-		$(MAKE) -C $$dir -f Makefile || exit $$?; \
-	done	
+	@for board in $(BOARDS); do                                     \
+		for dir in $(APPLICATIONS_MAKEFILES); do                    \
+			$(MAKE) BOARD=$$board -C $$dir -f Makefile || exit $$?; \
+		done                                                        \
+	done

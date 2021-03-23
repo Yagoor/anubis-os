@@ -1,7 +1,7 @@
 # C source files
 SOURCE_C += $(APP_C)
 
-DEBUG = 1
+BOARD = unittest
 
 C_FLAGS += -fprofile-arcs -ftest-coverage
 LDFLAGS += -lcmocka -lgcov --coverage

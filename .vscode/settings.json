@@ -1,4 +1,12 @@
 {
     "uncrustify.configPath.linux": "tests/code-style/uncrustify.cfg",
-    "editor.defaultFormatter": "zachflower.uncrustify"
+    "editor.defaultFormatter": "zachflower.uncrustify",
+    "files.associations": {
+        "clock.h": "c",
+        "watchdog.h": "c",
+        "cstdlib": "c",
+        "timer.h": "c",
+        "led.h": "c",
+        "gpio.h": "c"
+    }
 }
